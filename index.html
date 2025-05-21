@@ -13,14 +13,14 @@
         <div class="ticket-card">
             <h1 class="pad-bot32">Calcola il prezzo del biglietto</h1>
             <form class="ticketForm" id="ticketForm">
-                <label class="pad-bot32" for="km">Quanti kilometri devi percorrere?</label>
+                <label class="pad-bot32" for="km">Quanti chilometri devi percorrere?</label>
                 <input class="mar-tb" type="number" id="km" name="km" min="1" required>
 
-                <label for="sconto">Seleziona il tipo di biglietto</label>
-                <select class="mar-tb" name="sconto" id="sconto" required>
-                    <option value="Intero">Prezzo Intero</option>
-                    <option value="Studenti">Sconto Studenti (20%)</option>
-                    <option value="Over65">Sconto over 65 (40%)</option>
+                <label for="discount">Seleziona il tipo di biglietto</label>
+                <select class="mar-tb" name="sconto" id="discount" required>
+                    <option value="intero">Prezzo Intero</option>
+                    <option value="studenti">Sconto Studenti (20%)</option>
+                    <option value="over65">Sconto over 65 (40%)</option>
                 </select>
 
                 <button type="submit">Calcola prezzo</button>
