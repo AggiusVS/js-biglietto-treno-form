@@ -1,9 +1,12 @@
+
 document.getElementById("ticketForm").addEventListener("submit", function (e) {
     e.preventDefault()
 
 
     const km = parseFloat(document.getElementById("km").value)
     const discount = document.getElementById('discount').value;
+    const name = document.getElementById("name").value;
+    const surname = document.getElementById("surname").value;
 
     if (isNaN(km) || km <= 0) {
         alert("Inserire un numero valido di chilometri");
@@ -33,7 +36,10 @@ document.getElementById("ticketForm").addEventListener("submit", function (e) {
     }
 
     document.getElementById("output").innerHTML = `
-    Riepilogo: <br> Chilometri da percorrere: ${km} km<br>
-    Tipo di sconto: ${discountText}<br>
-    Prezzo totale: € ${finalPrice.toFixed(2)}`
+        <strong>Riepilogo:</strong><br> 
+        Nome e Cognome: ${name} ${surname}<br>
+        Chilometri da percorrere: ${km} km<br>
+        Tipo di sconto: ${discountText}<br>
+        Prezzo totale: <strong>€ ${finalPrice.toFixed(2)}</strong>
+    `
 })
